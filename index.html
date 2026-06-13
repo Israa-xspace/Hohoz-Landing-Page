@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale=1.0, user-scalable="no">
+    <title>Hohos | Luxurious Vibe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="circle-bg"></div>
+        
+        <header>
+            <div class="logo">HOHOZ</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">The Vibe</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content">
+                <h2>The Iconic <span>Hohos</span></h2>
+                <h1>FOR A LUXURIOUS LIFE</h1>
+                <p>
+                    Experience the first-ever "Chill-Master" technology. Fast digestion, 
+                    legendary taste, and instant energy boost.
+                </p>
+                <div class="btn-group">
+                    <button class="buy-btn">Buy Now</button>
+                    <button class="more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="imgs/main.png" alt="Hohos" class="main-img">
+            </div>
+        </main>
+
+        <div class="thumbnails">
+            <div class="thumb-item">
+                <img src="imgs/main.png" onclick="imgSlider('imgs/main.png'); changeCircleColor('linear-gradient(135deg, #00d4ff, #0055ff)')">
+            </div>
+            <div class="thumb-item">
+                <img src="imgs/coffee.png" onclick="imgSlider('imgs/coffee.png'); changeCircleColor('linear-gradient(135deg, #ffcc00, #ff6600)')">
+            </div>
+            <div class="thumb-item">
+                <img src="imgs/stru.png" onclick="imgSlider('imgs/stru.png'); changeCircleColor('linear-gradient(135deg, #ff0055, #6600ff)')">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.main-img').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle-bg');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
